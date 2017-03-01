@@ -119,7 +119,7 @@ public class LongestPathDAG {
                 }
             }
 
-            // Print the calculated shortest distances
+            // Print the calculated longest distances
             for (int i = 0; i < V; i++)
             {
                 if (dist[i] == INF)
