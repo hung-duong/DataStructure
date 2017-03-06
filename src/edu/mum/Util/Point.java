@@ -1,0 +1,18 @@
+package edu.mum.Util;
+
+/**
+ * Created by hungduong on 3/5/17.
+ */
+public class Point {
+    public int x;
+    public int y;
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + this.x + "," +  this.y + ")";
+    }
+}
