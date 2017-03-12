@@ -2,7 +2,7 @@ package edu.mum.Sorting;
 
 /**
  * Created by hungduong on 3/12/17.
- * Given a sorted array of strings which is interspersed with empty strings, write a meth- od to  nd the location of a
+ * Question: Given a sorted array of strings which is interspersed with empty strings, write a meth- od to  nd the location of a
  * given string.
  * Example:  nd “ball” in [“at”, “”, “”, “”, “ball”, “”, “”, “car”, “”, “”, “dad”, “”, “”] will return 4
  * Example:  nd “ballcar” in [“at”, “”, “”, “”, “”, “ball”, “car”, “”, “”, “dad”, “”, “”] will return -1

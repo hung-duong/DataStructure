@@ -2,7 +2,7 @@ package edu.mum.Sorting;
 
 /**
  * Created by hungduong on 3/11/17.
- * Given a sorted array of n integers that has been rotated an unknown number of times, give an O(log n) algorithm that
+ * Questions: Given a sorted array of n integers that has been rotated an unknown number of times, give an O(log n) algorithm that
  * nds an element in the array. You may assume that the array was originally sorted in increasing order.
  */
 public class RotatedArray {
