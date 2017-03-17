@@ -5,53 +5,43 @@ package edu.mum.ThreadsAndLocks;
  */
 public class Philosopher extends Thread{
     private int bites = 10;
-    private Chopstick left, right;
+    private Chopstick lower, higher;
+    private int index; //Label each chopstick is also for each Philosopher
 
-    public Philosopher(Chopstick left, Chopstick right) {
-        this.left = left;
-        this.right = right;
+    public Philosopher(int i, Chopstick left, Chopstick right) {
+        this.index = i;
+
+        if(left.getNumber() < right.getNumber()) {
+            this.lower = left;
+            this.higher = right;
+        } else {
+            this.lower = right;
+            this.higher = left;
+        }
     }
 
     public void eat() {
-        if(pickUp()) {
-            chew();
-            pushDown();
-        }
+        pickUp();
+        chew();
+        pushDown();
     }
 
-    public boolean pickUp() {
-          /* attempt to pick up */
-        if(!left.pickup()) {
-            return false;
-        }
-
-        if(!right.pickup()) {
-            left.pushDown();
-            return false;
-        }
-
-        return true;
+    public void pickUp() {
+        lower.pickup();
+        higher.pickup();
     }
 
     public void chew() {
     }
 
     public void pushDown() {
-        right.pushDown();
-        left.pushDown();
+        lower.pushDown();
+        higher.pushDown();
     }
 
     public void run() {
         for(int i = 0; i < bites; i++) {
             eat();
         }
-    }
-
-    public static void main(String[] args) {
-        Chopstick left = new Chopstick("left");
-        Chopstick right = new Chopstick(" right");
-
-        Philosopher p = new Philosopher(left, right);
-        p.run();
     }
 }

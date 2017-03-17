@@ -8,11 +8,13 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Chopstick {
     private Lock lock;
+    private int number;
     private String str; //left or right
 
-    public Chopstick(String str) {
-        this.str = str;
+    public Chopstick(int n, String str) {
         this.lock = new ReentrantLock();
+        this.number = n;
+        this.str = str;
     }
 
     public boolean pickup() {
@@ -24,5 +26,9 @@ public class Chopstick {
     public void pushDown() {
         System.out.println("pushDown " + str + " Chopstick");
         lock.unlock();
+    }
+
+    public int getNumber() {
+        return number;
     }
 }
