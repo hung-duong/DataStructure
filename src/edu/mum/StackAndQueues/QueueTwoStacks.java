@@ -7,12 +7,12 @@ import java.util.Stack;
  */
 
 /*
- * Implement a MyQueue class which implements a queue using two stacks
+ * Implement a QueueTwoStacks class which implements a queue using two stacks
  */
-public class MyQueue<T> {
+public class QueueTwoStacks<T> {
     Stack<T> s1, s2;
 
-    public MyQueue() {
+    public QueueTwoStacks() {
         s1 = new Stack<T>();
         s2 = new Stack<T>();
     }
