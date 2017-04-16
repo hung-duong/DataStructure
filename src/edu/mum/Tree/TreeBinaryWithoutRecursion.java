@@ -29,7 +29,7 @@ public class TreeBinaryWithoutRecursion {
             TreeNode ni = findNodeInsert(x);
             
             if (ni != null) {
-                if (ni.val > x) {
+                if (ni.data > x) {
                     ni.left = leaf;
                 } else {
                     ni.right = leaf;
@@ -47,7 +47,7 @@ public class TreeBinaryWithoutRecursion {
         
         while (p!=null) {
             q = p;
-            if (p.val > x)
+            if (p.data > x)
                 p = p.left;
             else
                 p = p.right;

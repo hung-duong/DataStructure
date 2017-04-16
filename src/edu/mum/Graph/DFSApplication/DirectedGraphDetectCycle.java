@@ -31,6 +31,9 @@ public class DirectedGraphDetectCycle {
     public boolean isCyclic() {
         // Mark all the vertices as not visited and not part of recursion stack
         boolean[] visited = new boolean[V];
+
+        // To detect a back edge, we can keep track of vertices currently in recursion stack of function for DFS traversal.
+        // If we reach a vertex that is already in the recursion stack, then there is a cycle in the tree
         boolean[] recStack = new boolean[V];
 
         for(int v = 0; v < V; v++) {
@@ -68,14 +71,13 @@ public class DirectedGraphDetectCycle {
         }
 
         recStack[v] = false; // remove the vertex from recursion stack
-        return true;
+        return false;
     }
 
     public static void main(String[] args) {
-        DirectedGraphDetectCycle graph = new DirectedGraphDetectCycle(7);
+        DirectedGraphDetectCycle graph = new DirectedGraphDetectCycle(4);
         graph.addEdge(0, 1);
         graph.addEdge(0, 2);
-        graph.addEdge(1, 2);
         graph.addEdge(2, 0);
         graph.addEdge(2, 3);
         graph.addEdge(3, 3);

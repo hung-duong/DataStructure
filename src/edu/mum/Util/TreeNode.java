@@ -10,11 +10,16 @@ package edu.mum.Util;
  * @author hungduong
  */
 public class TreeNode {
-    public int val;
+    public enum Color {RED, BLACK};
+
+    public int data;
+    public Color color;
     public TreeNode left;
     public TreeNode right;
-    public TreeNode(int x) {
-        val = x;
-        left = right = null;
+    public TreeNode parent;
+
+    public TreeNode(int data) {
+        this.data = data;
+        left = right = parent = null;
     }
 }

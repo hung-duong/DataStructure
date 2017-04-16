@@ -29,7 +29,7 @@ public class TreeBinary {
             TreeNode ni = findNodeInsert(x);
             
             if (ni != null) {
-                if (ni.val > x) {
+                if (ni.data > x) {
                     ni.left = leaf;
                 } else {
                     ni.right = leaf;
@@ -47,7 +47,7 @@ public class TreeBinary {
         
         while (p!=null) {
             q = p;
-            if (p.val > x)
+            if (p.data > x)
                 p = p.left;
             else
                 p = p.right;
@@ -59,7 +59,7 @@ public class TreeBinary {
     //Phuong phap dung de quy
     void preorderTraversal(TreeNode node){
         if (node!=null) {
-            System.out.print(node.val + "->");
+            System.out.print(node.data + "->");
             preorderTraversal(node.left);
             preorderTraversal(node.right);
         }
@@ -68,7 +68,7 @@ public class TreeBinary {
     void inorderTraversal(TreeNode node) {
         if (node!=null) {
             inorderTraversal(node.left);
-            System.out.print(node.val + "->");
+            System.out.print(node.data + "->");
             inorderTraversal(node.right);
         }
     }
@@ -77,7 +77,7 @@ public class TreeBinary {
         if (node!=null) {
             postorderTraversal(node.left);
             postorderTraversal(node.right);
-            System.out.print(node.val + "->");
+            System.out.print(node.data + "->");
         }
     }
 }

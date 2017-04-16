@@ -25,6 +25,7 @@ public class UndirectedGraphDetectCycle {
     //Function to add an edge into GraphBFS
     public void addEdge(int v, int w) {
         adj[v].add(w);
+        adj[w].add(v);
     }
 
     // Returns true if the graph contains a cycle, else false.
@@ -72,21 +73,30 @@ public class UndirectedGraphDetectCycle {
             }
         }
 
-        return true;
+        return false;
     }
 
     public static void main(String[] args) {
-        UndirectedGraphDetectCycle graph = new UndirectedGraphDetectCycle(7);
-        graph.addEdge(1, 0);
-        graph.addEdge(0, 2);
-        graph.addEdge(2, 0);
-        graph.addEdge(0, 3);
-        graph.addEdge(3, 4);
+        UndirectedGraphDetectCycle g1 = new UndirectedGraphDetectCycle(5);
+        g1.addEdge(1, 0);
+        g1.addEdge(0, 2);
+        g1.addEdge(2, 0);
+        g1.addEdge(0, 3);
+        g1.addEdge(3, 4);
 
-        if(graph.isCyclic())
-            System.out.print("Graph contains cycle");
+        if(g1.isCyclic())
+            System.out.println("Graph contains cycle");
         else
-            System.out.print("Graph doesn't contain cycle");
+            System.out.println("Graph doesn't contain cycle");
+
+        UndirectedGraphDetectCycle g2 = new UndirectedGraphDetectCycle(3);
+        g2.addEdge(0, 1);
+        g2.addEdge(1, 2);
+
+        if (g2.isCyclic())
+            System.out.println("Graph contains cycle");
+        else
+            System.out.println("Graph doesn't contains cycle");
 
         return;
     }
