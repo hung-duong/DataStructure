@@ -64,7 +64,7 @@ public class GraphDFS {
         g.addEdge(6, 4);
         g.addEdge(3, 2);
 
-        System.out.println("Following is Depth First Traversal (starting from vertex 2)");
+        System.out.println("Following is Depth First Traversal (starting from vertex 0)");
 
         g.DFS(0);
     }
