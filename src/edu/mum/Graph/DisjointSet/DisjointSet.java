@@ -5,6 +5,8 @@ import java.util.Map;
 
 /**
  * Created by hungduong on 3/1/17.
+ * In mathematics, two sets are said to be disjoint if they have no element in common.
+ * Equivalently, disjoint sets are sets whose intersection is the empty set
  */
 public class DisjointSet {
     class Node {

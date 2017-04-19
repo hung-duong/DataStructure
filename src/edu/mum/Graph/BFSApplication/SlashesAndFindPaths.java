@@ -68,7 +68,7 @@ public class SlashesAndFindPaths {
         sfp.addEdge(2, 5);
         sfp.addEdge(2, 7);
         sfp.addEdge(2, 1);
-        sfp.addEdge(4, 3);
+        sfp.addEdge(2, 3);
 
         sfp.addEdge(3, 8);
         sfp.addEdge(3, 2);
