@@ -35,7 +35,7 @@ public class CommonAncestor {
     public boolean covers(TreeNode root, TreeNode p) {
         if (root == null) return false;
 
-        if (root == p) return true;
+        if (root.val == p.val) return true;
 
         return covers(root.left, p) || covers(root.right, p);
     }

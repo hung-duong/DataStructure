@@ -6,7 +6,8 @@ package edu.mum.StackAndQueues;
  * We sequentially allocate space to the stacks and we link new blocks to the previous block. This means any new element in a stack
  * keeps a pointer to the previous top element of that particular stack.
  */
-public class TreeStacks2 {
+public class
+TreeStacks2 {
     private int stackSize = 300;
     private int indexUsed = 0;
     private int[] stackPoint = {-1, -1, -1}; // stack pointers to track top elem

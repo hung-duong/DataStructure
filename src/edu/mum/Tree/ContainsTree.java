@@ -2,7 +2,7 @@ package edu.mum.Tree;
 
 /**
  * Created by hungduong on 3/2/17.
- * You have two very large binary trees: T1, with millions of nodes, and T2, with hun- dreds of nodes.
+ * You have two very large binary trees: T1, with millions of nodes, and T2, with hundreds of nodes.
  * Create an algorithm to decide if T2 is a subtree of T1.
  */
 public class ContainsTree {
